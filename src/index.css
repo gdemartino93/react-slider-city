@@ -1,0 +1,13 @@
+:root{
+  --bg-black: black;
+  --bg-primary: cornflowerblue;
+  
+
+  --txt-white: white;
+}
+header{
+  min-height: 10vh;
+  background: var(--bg-primary);
+  color: var(--txt-white);
+
+}
