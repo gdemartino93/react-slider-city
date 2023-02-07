@@ -6,7 +6,7 @@ const url = "https://api.jsonbin.io/v3/b/63e199d4ace6f33a22d80fe4";
 
 const Slider = () => {
   const [data , setData] = useState([]);
-  const [selected , setSelected] = useState(0);
+  const [selected , setSelected] = useState(1);
 
   const getData = () =>{
     axios.get(url)
@@ -22,8 +22,8 @@ const Slider = () => {
   return (
     <div className='container d-flex justify-content-center'>
       <div className='slider-container'>
-            {data.map(el =>{
-                return <City data={el} />
+        {data.filter(el => el.id === selected).map(el =>{
+                return <City data={el} key={el.id} />
             })}
       </div>
     </div>
