@@ -8,6 +8,20 @@ const Slider = () => {
   const [data , setData] = useState([]);
   const [selected , setSelected] = useState(1);
 
+  const nextCity = () =>{
+    if (selected >= data.length){
+      setSelected(1)
+    }else{
+      setSelected(selected + 1)
+    }
+  }
+  const prevCity = () =>{
+    if ( selected == 1){
+      setSelected(data.length)
+    }else{
+      setSelected(selected - 1)
+    }
+  }
   const getData = () =>{
     axios.get(url)
         .then(res =>{
@@ -23,7 +37,7 @@ const Slider = () => {
     <div className='container d-flex justify-content-center'>
       <div className='slider-container'>
         {data.filter(el => el.id === selected).map(el =>{
-                return <City data={el} key={el.id} />
+                return <City data={el} key={el.id} prev={prevCity} next={nextCity} />
             })}
       </div>
     </div>
