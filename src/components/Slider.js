@@ -57,7 +57,7 @@ const Loading = () =>{
   return(
     <div className='loader'>
       <PacmanLoader
-      color="rgba(214, 54, 54, 1)"
+      color="rgba(255, 255, 0, 1)"
       />
   </div>
   )
