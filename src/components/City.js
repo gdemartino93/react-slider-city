@@ -1,17 +1,18 @@
 import React from 'react'
 
 const City = ({data}) => {
+    const {id,titolo,descrizione,durata,prezzo,img} = data;
   return (
     <div className='city'>
         <div className='city-img'>
-            <img src={data.img}></img>
+            <img src={img}></img>
         </div>
         <div className='city-info'>
-            <h2>{data.titolo}</h2>
-            <p>{data.descrizione}</p>
+            <h2>{titolo}</h2>
+            <p>{descrizione}</p>
             <div>
-                <span>{data.durata}</span>
-                <span>{data.prezzo}</span>
+                <span>{durata}</span>
+                <span>{prezzo}</span>
             </div>
 
             
