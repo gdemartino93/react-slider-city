@@ -56,14 +56,4 @@ img{
   font-size: 50px;
   display: flex;
   justify-content: space-between;
-  /* background-color: var(--bg-primary); */
 }
-/* img{
- width: 100%;
- height: auto;
-}
-.city-info{
-  background-color: var(--bg-primary);
-}
-
-} */
