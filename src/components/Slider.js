@@ -1,5 +1,6 @@
 import React, {useState , useEffect} from 'react';
 import axios from 'axios';
+import City from './City';
 // I've created json file and hosted on https://jsonbin.io as public
 const url = "https://api.jsonbin.io/v3/b/63e199d4ace6f33a22d80fe4";
 
@@ -20,7 +21,9 @@ const Slider = () => {
   return (
     <div className='container d-flex justify-content-center'>
       <div className='slider-container'>
-            asd
+            {data.map(el =>{
+              return <City />
+            })}
       </div>
     </div>
 
