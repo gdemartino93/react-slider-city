@@ -1,5 +1,6 @@
 import React, {useState , useEffect} from 'react';
 import axios from 'axios';
+import {PacmanLoader} from 'react-spinners';
 import City from './City';
 // I've created json file and hosted on https://jsonbin.io as public
 const url = "https://api.jsonbin.io/v3/b/63e199d4ace6f33a22d80fe4";
@@ -42,9 +43,9 @@ const Slider = () => {
     <div className='container d-flex justify-content-center'>
       <div className='slider-container'>
         {isError ? <Error /> : ""}
-        {data.filter(el => el.id === selected).map(el =>{
+        {isLoading ? <Loading /> : data.filter(el => el.id === selected).map(el =>{
                 return <City data={el} key={el.id} prev={prevCity} next={nextCity} />
-            })}
+            }) }
       </div>
     </div>
 
@@ -54,7 +55,11 @@ const Slider = () => {
 // componente da mostrare durante il caricamento
 const Loading = () =>{
   return(
-    <div>Is Loading</div>
+    <div className='loader'>
+      <PacmanLoader
+      color="rgba(214, 54, 54, 1)"
+      />
+  </div>
   )
 }
 // componente da mostrare se la chiamata api va in errore
