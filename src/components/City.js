@@ -14,9 +14,9 @@ const City = ({data,prev,next}) => {
         <div className='city-info'>
             <h2>{titolo}</h2>
             <p>{descrizione}</p>
-            <div>
-                <span>{durata}</span>
-                <span>{prezzo}</span>
+            <div className='d-flex flex-column'>
+                <span>Durata: {durata}</span>
+                <span>Prezzo: {prezzo} &euro;</span>
             </div>
         </div>
     </div>

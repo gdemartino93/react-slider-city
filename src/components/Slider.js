@@ -37,8 +37,14 @@ const Slider = () => {
         .catch(err => setIsError(true));
   };
   useEffect(()=>{
-    getData()
-  },[])
+    getData();
+    // dopo aver controllato se l'array è pieno imposta la proprietà titolo dell'array come titolo della pagina.
+    // questa operazione(insieme alla chiamata api) viene svolta ogni volta che il selected cambia valore i
+    if (data.length > 0) {
+      document.title = data.filter(el => el.id === selected)[0].titolo;
+    }
+    // document.documentElement.title("asd")
+  },[selected])
   return (
     <div className='container d-flex justify-content-center'>
       <div className='slider-container'>
