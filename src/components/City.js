@@ -1,17 +1,17 @@
 import React from 'react'
 
-const City = ({nome}) => {
+const City = ({data}) => {
   return (
     <div className='city'>
         <div className='city-img'>
-
+            <img src={data.img}></img>
         </div>
         <div className='city-info'>
-            <h2>nome {nome} città</h2>
-            <p>Descrizione</p>
+            <h2>{data.titolo}</h2>
+            <p>{data.descrizione}</p>
             <div>
-                <span>Durata giorni</span>
-                <span> Costo</span>
+                <span>{data.durata}</span>
+                <span>{data.prezzo}</span>
             </div>
 
             

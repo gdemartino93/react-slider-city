@@ -22,3 +22,10 @@ main{
   border: 1px solid blue;
   box-shadow: 2px 5px 5px 0.1px  blue;
 }
+.city{
+  border: 1px solid black;
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
