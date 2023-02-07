@@ -9,5 +9,16 @@ header{
   min-height: 10vh;
   background: var(--bg-primary);
   color: var(--txt-white);
-
+}
+main{
+  background-color: var(--bg-primary);
+  height: 90vh;
+}
+.slider-container{
+  width: 600px;
+  height: 400px;
+  background: var(--bg-black);
+  margin: 100px auto;
+  border: 1px solid blue;
+  box-shadow: 2px 5px 5px 0.1px  blue;
 }

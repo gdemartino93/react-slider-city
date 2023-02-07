@@ -18,9 +18,12 @@ const Slider = () => {
     getData()
   },[])
   return (
-    <div>
-      asd
+    <div className='container d-flex justify-content-center'>
+      <div className='slider-container'>
+            asd
+      </div>
     </div>
+
   )
 }
 
