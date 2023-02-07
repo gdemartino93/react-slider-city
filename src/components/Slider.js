@@ -4,8 +4,23 @@ import axios from 'axios';
 const url = "https://api.jsonbin.io/v3/b/63e199d4ace6f33a22d80fe4";
 
 const Slider = () => {
+  const [data , setData] = useState([]);
+
+  const getData = () =>{
+    axios.get(url)
+        .then(res =>{
+          setData(res.data.record);
+          console.log(res.data.record);
+        })
+        .catch(err => console.log(err));
+  };
+  useEffect(()=>{
+    getData()
+  },[])
   return (
-    <div>Slider</div>
+    <div>
+      asd
+    </div>
   )
 }
 
